@@ -1,0 +1,36 @@
+body {
+    background-color: blueviolet;
+   
+}
+.container {
+    padding:2vh 2vh 2vh 2vh;
+    margin: auto;
+    display: block;
+    border: 1px solid #000000;
+    border-radius: 4%;
+    max-height: 200vh;
+    width: 100vh;
+    height: 60vh;
+    overflow-y: auto;
+    background-color: lightblue;
+}
+
+.message {
+    border: 1px solid #000000;
+    border-radius: 10%;
+    margin: 2vh 2vh 0 2vh;
+}
+.left {
+    float: left;
+    clear:both;
+}
+
+.right {
+    float: right;
+    clear: both;
+}
+
+#send-container {
+   text-align: center;
+
+}
