@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { SocketIOService } from './core/service/socket-io.service';
 import { io } from 'socket.io-client';
 import { FormControl, FormGroup } from '@angular/forms';
@@ -12,8 +12,8 @@ export class AppComponent implements OnInit {
   title = 'chat-ui';
   socket: any;
   myForm: FormGroup;
-  @ViewChild('container') container: any;
-  constructor(private _socketIOService: SocketIOService) {
+  @ViewChild('container', { static: false }) container: any;
+  constructor(private _socketIOService: SocketIOService, private _renderer:Renderer2) {
     this.socket = io('https://connecting-india.onrender.com');
     this.myForm = new FormGroup({
       messageInp: new FormControl('')
@@ -47,10 +47,11 @@ export class AppComponent implements OnInit {
   }
 
   append(message: any, position: any) {
-    const messageElement = document.createElement('div');
-    messageElement.innerText = message;
+    const messageElement = this._renderer.createElement('div');
+    
     messageElement.classList.add('message');
     messageElement.classList.add(position);
-    this.container.nativeElement.innerHTML = messageElement.outerHTML;
+    const messageText = messageElement.innerText = message;
+    this._renderer.appendChild(this.container.nativeElement, messageElement);
   }
 }
