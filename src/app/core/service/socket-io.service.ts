@@ -9,6 +9,6 @@ export class SocketIOService {
   constructor() { }
 
   setUpSocketConnection() {
-    this.socket = io('https://connecting-india.onrender.com');
+    this.socket = io('https://node-server-pk6p.onrender.com');
   }
 }

@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   myForm: FormGroup;
   @ViewChild('container', { static: false }) container: any;
   constructor(private _socketIOService: SocketIOService, private _renderer:Renderer2) {
-    this.socket = io('https://connecting-india.onrender.com');
+    this.socket = io('https://node-server-pk6p.onrender.com');
     this.myForm = new FormGroup({
       messageInp: new FormControl('')
     });
