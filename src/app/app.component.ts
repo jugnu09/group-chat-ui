@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
     const message = form.value.messageInp;
     this.append(`You: ${message}`, 'right');
     this.socket.emit('send', message);
-    form.value.messageInp ='';
+    this.myForm.reset();
   }
 
   append(message: any, position: any) {
