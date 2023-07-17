@@ -1,20 +1,17 @@
-// body {
-//     background-color: blueviolet;
-   
-// }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-    min-height: 200px;
+    height: 90vh;
     border: 1px solid #ccc;
     border-radius: 3px;
     padding: 10px;
     overflow-y: auto;
 }
 
-// .message {
-//     border: 1px solid #000000;
-//     border-radius: 10%;
-//     margin: 2vh 2vh 0 2vh;
-// }
 .left {
     float: left;
     clear:both;
@@ -25,18 +22,6 @@
     clear: both;
 }
 
-// #send-container {
-//    text-align: center;
-
-// }
-
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
   #chat-container {
     display: flex;
     flex-direction: column;
@@ -46,7 +31,7 @@ body {
   }
 
   #chat-window {
-    width: 400px;
+    width: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
@@ -63,6 +48,7 @@ body {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    width:95%;
   }
 
   .send-button {
@@ -74,10 +60,7 @@ body {
     cursor: pointer;
   }
 
-//   #message-area {
-//     min-height: 200px;
-//     border: 1px solid #ccc;
-//     border-radius: 3px;
-//     padding: 10px;
-//     overflow-y: auto;
-//   }
+  #input-container {
+    float: left;
+    width: 95%;
+  }
