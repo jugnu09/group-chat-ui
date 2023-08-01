@@ -5,62 +5,79 @@ body {
 }
 
 .container {
-    height: 90vh;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    padding: 10px;
-    overflow-y: auto;
+  height: 70vh;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+  overflow-y: auto;
 }
 
-.left {
-    float: left;
-    clear:both;
+#chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.right {
-    float: right;
-    clear: both;
+#chat-window {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
 }
 
-  #chat-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+#message-box {
+  display: flex;
+  margin-bottom: 10px;
+}
 
-  #chat-window {
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-  }
+.message-input {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
 
-  #message-box {
-    display: flex;
-    margin-bottom: 10px;
+.send-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#input-container {
+  float: left;
+  width: 100%;
+}
+
+/* Media Queries */
+
+/* Small devices (e.g., mobile phones) */
+@media (max-width: 576px) {
+  .container {
+    height: 50vh;
   }
 
   .message-input {
-    flex-grow: 1;
-    margin-right: 10px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    width:95%;
+    width: 80%;
   }
+}
 
-  .send-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    padding: 5px 10px;
-    cursor: pointer;
+/* Medium devices (e.g., tablets) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .container {
+    height: 60vh;
   }
+}
 
-  #input-container {
-    float: left;
-    width: 95%;
+/* Large devices (e.g., laptops) */
+@media (min-width: 768px) {
+  .container {
+    height: 70vh;
   }
+}
